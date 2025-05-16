@@ -6,13 +6,13 @@ public class ATM {
  private int balance;
  private int pin;
  
- public ATM(int balance, int pin)
+ public ATM(int balance, int pin) //parameterised Constuctor
  {
 	 this.balance=balance;
 	 this.pin=pin;
  }
  
- public void displayMenu()
+ public void displayMenu() //menu for operform operations
  {
 	 System.out.println("1.check balance");
 	 System.out.println("2. deposit");
@@ -22,12 +22,12 @@ public class ATM {
 	 
  }
  
- public void deposit(int amount)
+ public void deposit(int amount) //for adding amount into an existing balance
  {
 	 balance+=amount;
  }
  
- public void withdraw(int amount)
+ public void withdraw(int amount) // withdraw amount from balance
  {
 	 if(balance<amount)
 	 {
@@ -37,24 +37,24 @@ public class ATM {
 	 balance-=amount;
  }
  
- public int getBalance()
+ public int getBalance() //for fetching the resent balance
  {
 	 return balance;
 	 
  }
  
- public boolean validatePin(int pin)
+ public boolean validatePin(int pin) // validation of pin
  {
 	 return this.pin==pin;
  }
 	
- public void changePin(int newPin)
+ public void changePin(int newPin) //updated the pin number
  {
 	 pin=newPin;
  }
  
  public static void main(String[] args) {
-		ATM atm=new ATM(1000,1234);
+		ATM atm=new ATM(1000,1234); //object of ATM
 		atm.displayMenu();
 		
 		System.out.println("Enter the pin");
